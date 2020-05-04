@@ -4,10 +4,11 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
          IonFab, IonFabButton, IonIcon, IonGrid, IonRow,
          IonCol, IonImg } from '@ionic/react';
 
-import { usePhotoGallery } from '../hooks/useGallery';
-import './Tab2.css';
+import { usePhotoGallery } from '../../hooks/useGallery';
 
-const Tab2: React.FC = () => {
+import './Galeria.css';
+
+const Galeria: React.FC = () => {
 
   const { photos, takePhoto } = usePhotoGallery();
 
@@ -38,4 +39,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Galeria;
