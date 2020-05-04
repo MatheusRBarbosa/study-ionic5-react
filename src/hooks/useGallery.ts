@@ -22,7 +22,7 @@ export function usePhotoGallery() {
 
 
     useEffect(() => {
-        const loadSaved = async () => {
+        async function loadSaved() {
             const photosString = await get('photos');
             const photosInStorage = (photosString ? JSON.parse(photosString) : []) as Photo[];
             // If running on the web...
@@ -41,7 +41,7 @@ export function usePhotoGallery() {
         loadSaved();
       }, [get, readFile]);
 
-    const takePhoto = async () => {
+     async function takePhoto() {
       const cameraPhoto = await getPhoto({
         resultType: CameraResultType.Uri,
         source: CameraSource.Camera,
@@ -62,7 +62,7 @@ export function usePhotoGallery() {
       })));
     };
 
-    const savePicture = async (photo: CameraPhoto, fileName: string): Promise<Photo> => {
+      async function savePicture(photo: CameraPhoto, fileName: string): Promise<Photo> {
         let base64Data: string;
         // "hybrid" will detect Cordova or Capacitor;
         if (isPlatform('hybrid')) {
