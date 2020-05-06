@@ -1,0 +1,11 @@
+img {
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+}
+
+.v-wrap {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}

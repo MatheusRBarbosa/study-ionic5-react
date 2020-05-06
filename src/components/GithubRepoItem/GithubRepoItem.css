@@ -1,0 +1,10 @@
+.v-wrap {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+label a {
+    font-size: 20px;
+    text-decoration: none;
+}

@@ -10,10 +10,10 @@ import {
   IonTabs
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { calculator, square, images } from 'ionicons/icons';
+import { calculator, logoGithub, images } from 'ionicons/icons';
 import Calculadora from './pages/Calculadora/Calculadora';
 import Galeria from './pages/Galeria/Galeria';
-import Tab3 from './pages/Tab3/Tab3';
+import Github from './pages/Github/Github';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -42,7 +42,7 @@ const App: React.FC = () => (
         <IonRouterOutlet>
           <Route path="/tab1" component={Calculadora} exact={true} />
           <Route path="/tab2" component={Galeria} exact={true} />
-          <Route path="/tab3" component={Tab3} />
+          <Route path="/tab3" component={Github} />
           <Route path="/" render={() => <Redirect to="/tab1" />} exact={true} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -55,8 +55,8 @@ const App: React.FC = () => (
             <IonLabel>Photos</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>CCC</IonLabel>
+            <IonIcon icon={logoGithub} />
+            <IonLabel>Github</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
